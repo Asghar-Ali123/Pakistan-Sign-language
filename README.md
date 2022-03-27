@@ -30,7 +30,7 @@ pillow
 Download the software setups and follow the on screen instructions
 
 step 1
-Installing python 3.7.1 can be downloaded from below link
+Installing python 3.7.1.
 
 
 step 2
@@ -57,16 +57,19 @@ step 5
 
 Installing win32api,win32con,win32gui with the following command
 pip install pypiwin32
+
 step 6
 
 Installing pyttsx3 with the following command
 pip install pyttsx3
+
 step 7
 
 Installing tensorflow framework with the following command
 python -m pip install tensorflow --trusted-host files.pythonhosted.org --trusted-host pypi.org --trusted-host pypi.python.org
 For upgradation use the following command
 pip install tensorflow==2.0.0-alpha0
+
 step 8
 
 Installing keras with the following command
@@ -82,6 +85,7 @@ step 10
 
 Installing qimage2ndarray with the following command
 pip install qimage2ndarray
+
 step 11
 
 Installing scipy with the following command
