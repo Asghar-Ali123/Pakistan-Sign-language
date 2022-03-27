@@ -28,6 +28,7 @@ keras
 pillow
 # Installing
 Download the software setups and follow the on screen instructions
+
 step 1
 Installing python 3.7.1 can be downloaded from below link
 
