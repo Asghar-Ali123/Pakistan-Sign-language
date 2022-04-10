@@ -1,30 +1,26 @@
-
-
-# Part 1 - Building the CNN
-#importing the Keras libraries and packages
 from keras.models import Sequential
 from keras.layers import Convolution2D
 from keras.layers import MaxPooling2D
 from keras.layers import Flatten
 from keras.layers import Dense, Dropout
-from keras import optimizers
+from tensorflow.keras import optimizers
 
 # Initialing the CNN
 classifier = Sequential()
 
 # Step 1 - Convolutio Layer 
-classifier.add(Convolution2D(32, 3,  3, input_shape = (64, 64, 3), activation = 'relu'))
+classifier.add(Convolution2D(32, 3,  3, input_shape = (64, 64, 3), activation = 'relu',padding='same'))
 
 #step 2 - Pooling
 classifier.add(MaxPooling2D(pool_size =(2,2)))
 
 # Adding second convolution layer
-classifier.add(Convolution2D(32, 3,  3, activation = 'relu'))
+classifier.add(Convolution2D(32, 3,  3, activation = 'relu',padding='same'))
 classifier.add(MaxPooling2D(pool_size =(2,2)))
 
 #Adding 3rd Concolution Layer
-classifier.add(Convolution2D(64, 3,  3, activation = 'relu'))
-classifier.add(MaxPooling2D(pool_size =(2,2)))
+classifier.add(Convolution2D(64, 3,  3, activation = 'relu',padding='same'))
+classifier.add(MaxPooling2D(pool_size =(2,2), padding="same"))
 
 
 #Step 3 - Flattening
@@ -94,6 +90,7 @@ plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train', 'test'], loc='upper left')
 plt.show()
+
 
 
 
